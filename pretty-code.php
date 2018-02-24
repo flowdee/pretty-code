@@ -1,22 +1,16 @@
 <?php
 /**
  * Plugin Name:     Pretty Code
- * Plugin URI:      https://pretty-code.com
- * Description:     Plugin Description.
+ * Plugin URI:      https://wordpress.org/plugins/pretty-code/
+ * Description:     Pretty Code Snippets for WordPress
  * Version:         1.0.0
- * Author:          Your Name
- * Author URI:      https://your-name.com
+ * Author:          KryptoniteWP
+ * Author URI:      https://kryptonitewp.com
  * Text Domain:     pretty-code
  *
- * @package         PluginName
- * @author          Your Name
- * @copyright       Copyright (c) Your Name
- *
- *
- * WordPress Plugin Boilerplate
- * Source: https://github.com/flowdee/wordpress-plugin-boilerplate
- *
- * Copyright (c) 2016 - flowdee ( https://twitter.com/flowdee )
+ * @package         PrettyCode
+ * @author          KryptoniteWP
+ * @copyright       Copyright (c) KryptoniteWP
  */
 
 // Exit if accessed directly
@@ -92,14 +86,16 @@ if( ! class_exists( 'Pretty_Code' ) ) {
             require_once PRETTY_CODE_DIR . 'includes/helper.php';
             require_once PRETTY_CODE_DIR . 'includes/scripts.php';
 
+            // Anything else
+            require_once PRETTY_CODE_DIR . 'includes/functions.php';
+            require_once PRETTY_CODE_DIR . 'includes/hooks.php';
+            require_once PRETTY_CODE_DIR . 'includes/shortcodes.php';
+
             // Admin only
             if ( is_admin() ) {
                 require_once PRETTY_CODE_DIR . 'includes/admin/plugins.php';
                 require_once PRETTY_CODE_DIR . 'includes/admin/class.settings.php';
             }
-
-            // Anything else
-            require_once PRETTY_CODE_DIR . 'includes/functions.php';
         }
 
         /**
@@ -148,19 +144,3 @@ function pretty_code_load() {
     return Pretty_Code::instance();
 }
 add_action( 'plugins_loaded', 'pretty_code_load' );
-
-/**
- * The activation hook
- */
-function pretty_code_activation() {
-    // Create your tables here
-}
-register_activation_hook( __FILE__, 'pretty_code_activation' );
-
-/**
- * The deactivation hook
- */
-function pretty_code_deactivation() {
-    // Cleanup your tables, transients etc. here
-}
-register_deactivation_hook(__FILE__, 'pretty_code_deactivation');

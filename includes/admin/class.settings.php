@@ -4,7 +4,7 @@
  *
  * Source: https://codex.wordpress.org/Settings_API
  *
- * @package     PluginName\Settings
+ * @package     PrettyCode\Settings
  * @since       1.0.0
  */
 

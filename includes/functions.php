@@ -2,7 +2,7 @@
 /**
  * Functions
  *
- * @package     PluginName\Functions
+ * @package     PrettyCode\Functions
  * @since       1.0.0
  */
 

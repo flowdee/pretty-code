@@ -2,7 +2,7 @@
 /**
  * Settings
  *
- * @package     PluginName\Admin\Plugins
+ * @package     PrettyCode\Admin\Plugins
  * @since       1.0.0
  */
 

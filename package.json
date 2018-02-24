@@ -2,8 +2,10 @@
   "name": "pretty-code",
   "version": "1.0.0",
   "private": true,
-  "description": "Pretty Code Snippet for WordPress",
-  "dependencies": {},
+  "description": "Pretty Code Snippets for WordPress",
+  "dependencies": {
+    "highlight.js": "^9.12.0"
+  },
   "devDependencies": {
     "clean-css": "^3.4.18",
     "grunt": "^1.0.1",
